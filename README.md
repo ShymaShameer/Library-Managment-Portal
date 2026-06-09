@@ -12,7 +12,7 @@ A personal library management app built with Streamlit and MySQL — manage book
 
 ## 📖 About
 
-The **Library Management Portal** is a full-stack data application built as part of a group project at **WBS Coding School**. It provides a simple, intuitive interface for managing a personal library — tracking books, registered friends, and loan activity — all backed by a MySQL database.
+The **Library Management Portal** is a full-stack data application built as part of a group project at **WBS Coding School**. Developed in just **4 days** as part of an intensive bootcamp sprint, it provides a simple, intuitive interface for managing a personal library — tracking books, registered friends, and loan activity — all backed by a MySQL database.
 
 ---
 
