@@ -62,5 +62,5 @@ This project was built with ❤️ as part of the **Data Science Bootcamp at WBS
 | Name | GitHub |
 |---|---|
 | Shyma Shameer | [@ShymaShameer](https://github.com/ShymaShameer) |
-| Aylin Y 
-| Jagan Prabhu 
+| Aylin Yildiz | [@AylinYildiz]((https://github.com/AylinYildiz26)) |
+| Jagan Prabhu | [@JaganPrabhu]((https://github.com/prabhu-kumaran)) |
