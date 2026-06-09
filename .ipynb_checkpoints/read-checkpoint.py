@@ -1,8 +1,9 @@
 import pandas as pd
 from sqlalchemy import create_engine, text
+import streamlit as st
+connection_string = st.secrets["connection_string"]
 
-
-connection_string = 'mysql+pymysql://root:shymamysql@127.0.0.1:3306/liane_library'
+#connection_string = 'mysql+pymysql://root:shymamysql@127.0.0.1:3306/liane_library'
 
 def read_friends():
     query = """
