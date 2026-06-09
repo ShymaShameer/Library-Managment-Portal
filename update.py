@@ -3,7 +3,7 @@ from sqlalchemy import create_engine, text
 import streamlit as st
 connection_string = st.secrets["connection_string"]
 
-#connection_string = 'mysql+pymysql://root:shymamysql@127.0.0.1:3306/liane_library'
+
 
 def update_friend(friend_id, first_name=None, last_name= None, email=None, phone=None,notes= None,max_loan= 2):
     engine = create_engine(connection_string)
