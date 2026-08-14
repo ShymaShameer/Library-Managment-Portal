@@ -17,7 +17,7 @@ engine = get_engine()
 
 # DELETE FRIEND
 def delete_friend(friend_id):
-    engine = create_engine(connection_string)
+    
     query = text("""
         DELETE FROM friends
         WHERE friend_id = :friend_id
@@ -34,7 +34,7 @@ def delete_friend(friend_id):
 
 # DELETE BOOK
 def delete_book(book_id):
-    engine = create_engine(connection_string)
+    
 
 # to block deletion if the book has any loan history
     check_query = text("""
@@ -66,7 +66,7 @@ def delete_book(book_id):
 
 # DELETE LOAN
 def delete_loan(loan_id):
-    engine = create_engine(connection_string)
+    
     query = text("""
         DELETE FROM loans
         WHERE loan_id = :loan_id
