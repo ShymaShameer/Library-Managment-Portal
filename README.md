@@ -5,8 +5,7 @@ A personal library management app built with Streamlit and MySQL — manage book
 ---
 
 ## 🚀 Live App
-👉 [Open  Library Management App ](https://library-managment-app-8bgkbzmyjz3veqyqeymazx.streamlit.app/)
-http://192.168.1.112:8501/
+👉 [Open  Library Management App ](http://192.168.1.112:8501/)
 
 
 ---
