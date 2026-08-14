@@ -4,7 +4,6 @@ import streamlit as st
 connection_string = st.secrets["connection_string"]
 
 
-engine = get_engine()
 
 def read_friends():
     query = """
