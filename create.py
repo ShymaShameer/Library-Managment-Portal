@@ -18,7 +18,7 @@ def create_friend(first_name,last_name,email,phone, max_loan=2, notes=None):
     df= pd. DataFrame(
         [[first_name,last_name,email,phone, max_loan, notes]], columns= ["first_name","last_name","email","phone","max_loan", "notes"])
     df.to_sql(
-        "friends", if_exists="append", con=connection_string, index=False)
+        "friends", if_exists="append", con=engine, index=False)
     message = f"Added '{first_name} {last_name}' to 'friends'."
     return message
 
@@ -31,7 +31,7 @@ def create_book(title,author,isbn,genre, comments, is_available, date_added=pd.T
     if isbn:
         existing = pd.read_sql(
             "SELECT COUNT(*) as count FROM books WHERE isbn = %s",
-            con=connection_string,
+            con=engine,
             params=(isbn,)
         )
         if existing["count"][0] > 0:
@@ -41,7 +41,7 @@ def create_book(title,author,isbn,genre, comments, is_available, date_added=pd.T
         [[title,author,isbn,genre, comments, is_available, date_added]], 
         columns= ["title","author","isbn","genre","comments","is_available","date_added"])
     df.to_sql(
-        "books", if_exists="append", con=connection_string, index=False)
+        "books", if_exists="append", con=engine, index=False)
     message = f"Added '{title}' to 'books'."
     return message
 
@@ -86,7 +86,7 @@ def create_loan(book, friend, loan_status, remarks=None, due_date=None, date_ret
         columns=["book_id", "friend_id", "date_borrowed", "due_date", "date_returned", "loan_status", "remarks"]
     )
     
-    df.to_sql("loans", if_exists="append", con=connection_string, index=False)
+    df.to_sql("loans", if_exists="append", con=engine, index=False)
     
     message = f"Added new book loan on '{date_borrowed}' to 'loans'."
     return message
