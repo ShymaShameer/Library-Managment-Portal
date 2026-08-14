@@ -1,7 +1,7 @@
 import pandas as pd
 from sqlalchemy import create_engine, text
 import streamlit as st
-connection_string = st.secrets["connection_string"]
+
 
 @st.cache_resource
 def get_engine():
