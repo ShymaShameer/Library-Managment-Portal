@@ -16,7 +16,7 @@ engine = get_engine()
 
 
 def update_friend(friend_id, first_name=None, last_name= None, email=None, phone=None,notes= None,max_loan= 2):
-    engine = create_engine(connection_string)
+    
     updates = []
     params = {"friend_id": friend_id}
 
@@ -61,7 +61,7 @@ def update_friend(friend_id, first_name=None, last_name= None, email=None, phone
 
     
 def update_book(book_id, title=None, author=None, isbn=None, genre=None, comments=None, is_available=None):
-    engine = create_engine(connection_string)
+    
     
     # Track the pieces of our SQL SET statement and parameters
     updates = []
@@ -120,7 +120,7 @@ def update_loan(
     loan_status= None,
     remarks= None
 ):
-    engine = create_engine(connection_string)
+    
     updates = []
     params = {"loan_id": loan_id}
 
