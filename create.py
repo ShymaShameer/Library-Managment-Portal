@@ -14,7 +14,7 @@ def get_engine():
 engine = get_engine()
 
 def create_friend(first_name,last_name,email,phone, max_loan=2, notes=None):
-    engine = create_engine(connection_string)
+    
     df= pd. DataFrame(
         [[first_name,last_name,email,phone, max_loan, notes]], columns= ["first_name","last_name","email","phone","max_loan", "notes"])
     df.to_sql(
@@ -24,7 +24,7 @@ def create_friend(first_name,last_name,email,phone, max_loan=2, notes=None):
 
 
 def create_book(title,author,isbn,genre, comments, is_available, date_added=pd.Timestamp.today().date()):
-    engine = create_engine(connection_string)
+    
     if is_available is None:
         is_available = True
 # Check for duplicate ISBN before inserting
@@ -46,7 +46,7 @@ def create_book(title,author,isbn,genre, comments, is_available, date_added=pd.T
     return message
 
 def create_loan(book, friend, loan_status, remarks=None, due_date=None, date_returned=None, date_borrowed=None):
-    engine = create_engine(connection_string)
+    
     # Dates
     if date_borrowed is None:
         date_borrowed = pd.Timestamp.today().date()
