@@ -20,7 +20,7 @@ def read_friends():
         SELECT *
         FROM friends
     """
-    return pd.read_sql(query,con=connection_string)
+    return pd.read_sql(query,con=engine)
 
 
 def read_books():
@@ -28,7 +28,7 @@ def read_books():
         SELECT *
         FROM books
     """
-    return pd.read_sql(query,con=connection_string)
+    return pd.read_sql(query,con=engine)
 
 
 def read_loans():
@@ -36,15 +36,15 @@ def read_loans():
         SELECT *
         FROM loans
     """
-    return pd.read_sql(query,con=connection_string)
+    return pd.read_sql(query,con=engine)
 
 
 
 def read_summary():
-    available_books = pd.read_sql("SELECT COUNT(*) as count FROM books WHERE is_available = 1", con=connection_string)
-    total_books = pd.read_sql("SELECT COUNT(*) as count FROM books", con=connection_string)
-    total_friends = pd.read_sql("SELECT COUNT(*) as count FROM friends", con=connection_string)
-    active_loans = pd.read_sql("SELECT COUNT(*) as count FROM loans WHERE date_returned IS NULL", con=connection_string)
+    available_books = pd.read_sql("SELECT COUNT(*) as count FROM books WHERE is_available = 1", con=engine)
+    total_books = pd.read_sql("SELECT COUNT(*) as count FROM books", con=engine)
+    total_friends = pd.read_sql("SELECT COUNT(*) as count FROM friends", con=engine)
+    active_loans = pd.read_sql("SELECT COUNT(*) as count FROM loans WHERE date_returned IS NULL", con=engine)
     
     return {
         "available_books": available_books["count"][0],
@@ -69,4 +69,4 @@ def read_books_on_loan():
         JOIN friends f ON l.friend_id = f.friend_id
         WHERE l.date_returned IS NULL
     """
-    return pd.read_sql(query, con=connection_string)
+    return pd.read_sql(query, con=engine)
