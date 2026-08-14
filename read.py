@@ -3,6 +3,16 @@ from sqlalchemy import create_engine, text
 import streamlit as st
 connection_string = st.secrets["connection_string"]
 
+@st.cache_resource
+def get_engine():
+    connection_string = st.secrets["connection_string"]
+    return create_engine(
+        connection_string,
+        pool_pre_ping=True,  # Automatically reconnects if connection dropped
+        pool_recycle=1800,   # Recycles idle connections every 30 minutes
+    )
+
+engine = get_engine()
 
 def read_friends():
     query = """
