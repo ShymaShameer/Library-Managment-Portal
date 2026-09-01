@@ -49,7 +49,7 @@ The **Library Management Portal** is a full-stack data application built as part
 |---|---|
 | Frontend | Streamlit |
 | Backend | Python |
-| Database | MySQL (hosted on Railway) |
+| Database | MySQL (hosted on Aiven) |
 | ORM | SQLAlchemy |
 | Data Processing | Pandas |
 | Version Control | Git & GitHub |
