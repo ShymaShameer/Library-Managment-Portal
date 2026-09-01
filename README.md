@@ -1,6 +1,6 @@
 # 📚 Library-Managment-Portal
-A personal library management app built with Streamlit and MySQL — manage books, friends, and loans in one place with ease.
-[![Streamlit App]]([https://library-managment-app-8bgkbzmyjz3veqyqeymazx.streamlit.app/])
+A personal library management app built with Streamlit and MySQL — manage books, friends, and loans in one place with ease !
+
 
 ---
 
